@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
 
 root 'users#new'
 
@@ -50,6 +51,56 @@ resources :users
 
   # get 'users/update'
 
+=======
+  get 'sessions/create'
+
+  get 'sessions/destroy'
+
+  root 'users#new'
+  resources :users
+  # get 'comments/new'
+
+  # get 'comments/create'
+
+  # get 'comments/index'
+
+  # get 'comments/show'
+
+  # get 'comments/edit'
+
+  # get 'comments/update'
+
+  # get 'comments/delete'
+
+  # get 'comments/destroy'
+
+  # get 'events/create'
+
+  # get 'events/new'
+
+  # get 'events/create'
+
+  # get 'events/index'
+
+  # get 'events/show'
+
+  # get 'events/edit'
+
+  # get 'events/update'
+
+  # get 'events/delete'
+
+  # get 'events/show'
+
+  # get 'users/new'
+
+  # get 'users/create'
+
+  # get 'users/edit'
+
+  # get 'users/update'
+
+>>>>>>> 6c08b564c1d1dcf7cabcee41309c04f257a510ff
   # get 'users/index'
 
   # get 'users/show'
