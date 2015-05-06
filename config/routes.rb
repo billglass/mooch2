@@ -1,51 +1,60 @@
 Rails.application.routes.draw do
-  get 'comments/new'
 
-  get 'comments/create'
+root 'users#new'
 
-  get 'comments/index'
+resources :users
 
-  get 'comments/show'
+  # Post 'users/new', to: 'users#create'
 
-  get 'comments/edit'
+  # post 'users/new', to: 'users#login'
 
-  get 'comments/update'
+  # get 'comments/new'
 
-  get 'comments/delete'
+  # get 'comments/create'
 
-  get 'comments/destroy'
+  # get 'comments/index'
 
-  get 'events/create'
+  # get 'comments/show'
 
-  get 'events/new'
+  # get 'comments/edit'
 
-  get 'events/create'
+  # get 'comments/update'
 
-  get 'events/index'
+  # get 'comments/delete'
 
-  get 'events/show'
+  # get 'comments/destroy'
 
-  get 'events/edit'
+  # get 'events/create'
 
-  get 'events/update'
+  # get 'events/new'
 
-  get 'events/delete'
+  # get 'events/create'
 
-  get 'events/show'
+  # get 'events/index'
 
-  get 'users/new'
+  # get 'events/show'
 
-  get 'users/create'
+  # get 'events/edit'
 
-  get 'users/edit'
+  # get 'events/update'
 
-  get 'users/update'
+  # get 'events/delete'
 
-  get 'users/index'
+  # get 'events/show'
 
-  get 'users/show'
+  # get 'users/new'
 
-  get 'users/destroy'
+  # get 'users/create'
+
+  # get 'users/edit'
+
+  # get 'users/update'
+
+  # get 'users/index'
+
+  # get 'users/show'
+
+  # get 'users/destroy'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
