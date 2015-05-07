@@ -54,8 +54,8 @@ resources :users
 
   # get 'sessions/destroy'
 
-  root 'users#new'
-  resources :users, :comments, :events
+  # root 'users#new'
+  # resources :users, :comments, :events
   # get 'comments/new'
 
   # get 'comments/create'
@@ -98,7 +98,6 @@ resources :users
 
   # get 'users/update'
 
->>>>>>> 6c08b564c1d1dcf7cabcee41309c04f257a510ff
   # get 'users/index'
 
   # get 'users/show'
