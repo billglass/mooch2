@@ -1,9 +1,14 @@
 class SessionsController < ApplicationController
+  
+  def new
+  end
+
   def create
-  	@users = User.find_by(email: params[:email])
-  	if @user and @user.password == params.password
-  		session[:user_id] = @user.id
-     flash[:notice]= "You successfully logged in"
+  	@user = User.find_by(email: params[:email])
+  	if @user and @user.password == params[:password]
+  	 session[:user_id] = @user.id
+     flash[:notice] = "You successfully logged in"
+     redirect_to user_path(@user.id)
    else
    	flash[:alert] = "There has been an error"
    	render :new
