@@ -6,7 +6,7 @@ get '/login', to: 'sessions#new'
 post '/login', to: 'sessions#create'
 delete '/logout', to: 'sessions#destroy'
 
-resources :users
+resources :users, :events
 
 
   # Post 'users/new', to: 'users#create'

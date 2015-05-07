@@ -1,18 +1,28 @@
 class EventsController < ApplicationController
-  def create
+ 
+before_action :set_event, only: [:show, :edit, :update, :destroy]
+
+  def index
+    @events = Event.all
   end
 
   def new
+    @event = Event.new
   end
 
   def create
-  end
-
-  def index
+    @event = Event.new(event_params)
+      if @event.save
+        redirect_to @event, notice: "New Event Posted"
+      else 
+        flash[:alert] = "There was an error"
+        render :new
+    end
   end
 
   def show
   end
+
   def edit
   end
 
@@ -22,6 +32,14 @@ class EventsController < ApplicationController
   def delete
   end
 
-  def show
+  private 
+
+  def set_event
+    @event = Event.find(params[:id])
   end
+
+  def event_params
+    params.require(:event).permit(:title, :body, :incentive)
+  end
+
 end
