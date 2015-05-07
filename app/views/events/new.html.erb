@@ -1,2 +1,25 @@
-<h1>Events#new</h1>
-<p>Find me in app/views/events/new.html.erb</p>
+<h1>Post Your Event</h1>
+
+<%= form_for @event do |f| %>
+
+	<p>
+		<%= f.label :title %>
+		<%= f.text_field :title %>
+	</p>
+
+	<p>
+		<%= f.label :body %>
+		<%= f.text_field :body %>
+	</p>
+
+	<p>
+		<%= f.label :incentive %>
+		<%= f.text_field :incentive %>
+	</p>
+
+	<p>
+		<%= f.submit %>
+	</p>	
+
+<% end %>
+
