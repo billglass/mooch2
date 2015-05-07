@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
 
 root 'users#new'
 
@@ -51,13 +50,12 @@ resources :users
 
   # get 'users/update'
 
-=======
-  get 'sessions/create'
+  # get 'sessions/create'
 
-  get 'sessions/destroy'
+  # get 'sessions/destroy'
 
   root 'users#new'
-  resources :users
+  resources :users, :comments, :events
   # get 'comments/new'
 
   # get 'comments/create'
