@@ -13,3 +13,102 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+	background: url(nyc.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+ }
+
+.header {
+	background: rgba(0,0,0, .7);
+	height: 175px;
+}
+
+.mooch {
+	font-family: 'Economica';
+	font-size: 6em;
+	color: rgb(64, 188, 230);
+	text-align: center;
+	margin: 0 auto;
+  background: -webkit-linear-gradient(#FFFF00, #00FFCC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.below {
+	font-family: 'Economica';
+	font-size: 18pt;
+	color: rgb(64, 188, 230);
+	text-align: center;
+	margin: 25px 0 auto;
+	/*padding: 10px;*/
+  background: -webkit-linear-gradient(#FFFF00, #00FFCC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navi {
+	display: block;
+	float: left;
+	margin: 0 auto;
+}
+
+.navi li {
+	font-family: 'Economica';
+	list-style-type: none;
+	margin: 15px 0 auto;
+}
+
+.navi li a, :visited {
+	text-decoration: none;
+	font-size: 14pt;
+	color: #00FFCC;
+	text-align: center;
+}
+
+.enter {
+	margin: 50px 0 auto;
+}
+
+.info {
+	text-align: center;
+	margin: 0 auto;
+}
+
+.data {
+	font-family: 'Economica';
+	height: 35px;
+	width: 300px;
+	font-size: 1em;
+}
+
+.button {
+	font-family: 'Economica';
+	text-align: center;
+	height: 35px;
+	width: 308px;
+	margin: 10px 0 auto;
+	font-size: 1em;
+	background: -webkit-linear-gradient(#FFFF00, #00FFCC);
+}
+
+/*.wrapper {
+	width: 350px;
+	height: 100px;
+	background: -webkit-linear-gradient(#eee, #000000);
+}*/
+
+
+.notice {
+	font-family: 'Economica';
+	font-size: 2em;
+	margin: 0 auto;
+	padding: 100px;
+	text-align: center;
+	background: -webkit-linear-gradient(#FFFF00, #00FFCC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

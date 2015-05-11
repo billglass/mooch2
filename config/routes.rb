@@ -1,13 +1,30 @@
 Rails.application.routes.draw do
 
-root 'users#new'
+# get '/user/:id/events', to: 'user#events', as: 'user_events'
+# get '/users/:users_id/events/new', to: 'events#new', as: 'new_user_events_path'
+# get '/users/:users_id/events/edit', to: 'events#edit', as: 'edit_user_events_path'
+# get '/users/:users_id/events', to: 'events#show'
 
 get '/login', to: 'sessions#new'
 post '/login', to: 'sessions#create'
 delete '/logout', to: 'sessions#destroy'
 
-resources :users, :events
+resources :users do
+  resources :events do
+    resources :comments, shallow: true, only: [:create, :destroy]
+  end
+end
 
+root 'users#new'
+
+# get '/login', to: 'sessions#new'
+# post '/login', to: 'sessions#create'
+# delete '/logout', to: 'sessions#destroy'
+
+
+# only:[:new, :create, :show, :edit] do
+#   resource :events, only:[:new, :show, :edit]
+  # resources :comments
 
   # Post 'users/new', to: 'users#create'
 

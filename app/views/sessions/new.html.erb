@@ -1,20 +1,25 @@
-<h1>Please login</h1>
+<div class="header">
+
+	<h1 class="mooch">On the House</h1>
+	<h3 class="below">Freedom Awaits. Login Today</h3>
+
+</div>
 
 <%= form_tag '/login', method: :post do %>
 
-	<p>
-		<%= label_tag :email %>
-		<%= email_field_tag :email %>
-	</p>
+	<div class="enter">
+		<p class="info">
+			<%= email_field_tag :email, nil, placeholder: "Email", class: "data" %>
+		</p>
 
-	<p>
-		<%= label_tag :password %>
-		<%= password_field_tag :password %>
-	</p>
+		<p class="info">
+			<%= password_field_tag :password, nil, placeholder: "Password", class: "data" %>
+		</p>
 
-	<p>
-		<%= submit_tag :login %>
-	</p>
+		<p class="info">
+			<%= submit_tag :Login, class: "button" %>
+		</p>
+	</div>
 
 <% end %>
 

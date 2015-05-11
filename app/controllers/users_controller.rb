@@ -7,24 +7,23 @@ class UsersController < ApplicationController
   end
 
   def new
-    @user = User.new 
+    @user = User.new
   end
 
   def create
     @user = User.new(user_params)
     if @user.save  
       redirect_to @user, notice: "New Account Created"
-    else 
-     flash[:alert] = "There was an error"
-     render :new
+      else 
+        flash[:alert] = "There was an error"
+        render :new
+      end
     end
-  end
 
   def edit
   end
 
-  def update
-    
+  def update 
   end
 
   def show
@@ -36,7 +35,7 @@ class UsersController < ApplicationController
   private
 
   def set_user
-    @user = User.find(params[:id])
+      @user = User.find(params[:id])
   end
 
   def user_params
