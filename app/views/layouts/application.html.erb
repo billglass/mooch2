@@ -9,30 +9,17 @@
 </head>
 
 <body>
-	<div class="wrapper">
-		<nav class="navi">
-			<ul>
-				<li><%= link_to 'Home', root_path %></li>
+	
+	<%= render 'shared/nav' %>
 
-				<% if current_user %>
-					<li><%= link_to 'Events', user_events_path(current_user) %></li>
-					<li><%= link_to 'Users', users_path %></li>
-					<li><%= link_to 'Logout', logout_path, method: :delete %></li>
-				<% else %>
-					<li><%= link_to 'Login', login_path %></li>
-				<% end %>
-
-			</ul>
-		</nav>
-	</div>
 	<main>
 		<%= yield %>
-	<div class="wrapper">
-		<p class="notice">
-		<%= flash[:notice] if flash[:notice] %>
-		<%= flash[:alert] if flash[:alert] %>
-		</p>
-	</div>
+		<div class="wrapper">
+			<p class="notice">
+			<%= flash[:notice] if flash[:notice] %>
+			<%= flash[:alert] if flash[:alert] %>
+			</p>
+		</div>
 	</main>
 </body>
 </html>

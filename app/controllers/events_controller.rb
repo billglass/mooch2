@@ -12,9 +12,9 @@ before_action :set_event, only: [:show, :edit, :update, :destroy]
   end
 
   def create
-    @event = Event.new(params[:id])
+    @event = Event.new(event_params)
       if @event.save
-        redirect_to new_user_event_path, notice: "New Event Posted"
+        redirect_to user_events_path, notice: "New Event Posted"
       else 
         # flash[:alert] = "There was an error"
         render :new
@@ -25,7 +25,7 @@ before_action :set_event, only: [:show, :edit, :update, :destroy]
   end
 
   def edit
-    @event = Event.find(params[:id])
+    @event = Event.find(event_params)
   end
 
   def update
@@ -42,9 +42,9 @@ before_action :set_event, only: [:show, :edit, :update, :destroy]
 
   private 
 
-  # def event_params
-  #   params.require(:event).permit(:title, :body, :incentive).merge(:user_id)
-  # end
+  def event_params
+    params.require(:event).permit(:title, :body, :incentive).merge(user: current_user)
+  end
 
   def set_event
     @event = Event.find(params[:id])
