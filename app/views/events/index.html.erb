@@ -1,11 +1,30 @@
-<h1>Events#index</h1>
+<h1>Home is On the House</h1>
 <p>Find me in app/views/events/index.html.erb</p>
 
 <ol>
-	<% @events.each do |event| %>
-	<li>
-		<%= link_to event.title, event_path(event.id) %>
-	</li>
-	<% end %>
+	<%= render @events %>
 </ol>
+
+<%= form_tag(user_events_path, :method=>'post', :multipart => true) do %>
+
+	<p>
+		<%= text_field_tag :title, nil, placeholder: 'Title', class: "data" %>
+	</p>
+
+	<p>
+		
+		<%= text_field_tag :body, nil, placeholder: "Post", class: "data" %>
+	</p>
+
+	<p>
+		
+		<%= text_field_tag :incentive, nil, placeholder: "On The House", class: "data" %>
+	</p>
+
+	<p>
+		<%= submit_tag 'Submit', class: "button" %>
+	</p>	
+
+
+<% end %>
 
