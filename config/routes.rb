@@ -9,13 +9,18 @@ get '/login', to: 'sessions#new'
 post '/login', to: 'sessions#create'
 delete '/logout', to: 'sessions#destroy'
 
-resources :users do
-  resources :events do
-    resources :comments, shallow: true, only: [:create, :destroy]
-  end
+resources :users, except: [:index, :edit]
+get 'users/:name', to: 'users#show', as: 'name'
+
+# resources :events
+# get 'events/:title', to: 'events#show', as: 'title'
+
+resources :events do
+  resources :comments, shallow: true, only: [:create, :destroy]
 end
 
 root 'users#new'
+end
 
 # get '/login', to: 'sessions#new'
 # post '/login', to: 'sessions#create'
@@ -180,4 +185,4 @@ root 'users#new'
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
+

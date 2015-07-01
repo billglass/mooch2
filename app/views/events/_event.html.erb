@@ -1,2 +1,3 @@
-<li><%=link_to event.title %></li>
+<%= event.title %>
+<li><%= link_to event.title, @event.id %></li>
 <%= params.inspect %>

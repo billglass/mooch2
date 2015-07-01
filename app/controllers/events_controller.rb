@@ -8,13 +8,12 @@ before_action :set_event, only: [:show, :edit, :update, :destroy]
 
   def new
     @event = Event.new
-    @event.save
   end
 
   def create
     @event = Event.new(event_params)
       if @event.save
-        redirect_to user_events_path, notice: "New Event Posted"
+        redirect_to events_path, notice: "New Event Posted"
       else 
         # flash[:alert] = "There was an error"
         render :new
@@ -22,6 +21,8 @@ before_action :set_event, only: [:show, :edit, :update, :destroy]
   end
 
   def show
+    @event = Event.find(params[:id])
+    @comment = Comment.new
   end
 
   def edit

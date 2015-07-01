@@ -25,11 +25,12 @@ body {
 .header {
 	background: rgba(0,0,0, .7);
 	height: 175px;
-	max-width: 95%;
+	max-width: 100%;
+	margin: auto;
 }
 
 .header h3 {
-	margin-left: 50px;
+	margin: auto;
 }
 
 .mooch {
@@ -56,9 +57,10 @@ body {
 }
 
 .navi {
-	display: block;
-	float: left;
-	margin: 0 auto;
+	display: inline;
+	font-family: 'Economica';
+/*	float: left;*/
+/*	margin: auto;*/
 }
 
 .navi li {
@@ -80,7 +82,8 @@ body {
 
 .info {
 	text-align: center;
-	margin: 0 auto;
+	margin: auto;
+	color: black;
 }
 
 .data {
@@ -119,6 +122,46 @@ body {
 }
 
 .list {
+	margin-top: 50px;
+	/*margin: auto;*/
 	text-align: center;
-	max-width: 98%;
+	font-size: 2em;
+}
+
+.post {
+	font-family: 'Economica';
+	font-size: 2em;
+	color: rgb(64, 188, 230);
+	text-align: center;
+	margin: 0 auto;
+  background: -webkit-linear-gradient(#FFFF00, #00FFCC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.comms {
+	margin: 25px 0 auto;
+}
+
+.said {
+	font-family: 'Economica';
+	font-size: 2em;
+	color: black;
+	text-align: center;	
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity:0.6;
+  width: 300px;
+  margin: auto;
+  margin-top: 25px;
+}
+
+.said p {
+	margin: 5%;
+	color: #19F9FC;
+}
+
+.events-all {
+	margin: auto;
+	padding: 0;
 }
